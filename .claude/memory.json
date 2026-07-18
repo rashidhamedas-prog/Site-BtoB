@@ -19,7 +19,8 @@
   "fixedBugs": [
     "AdminProducts images empty on save (useCallback deps)",
     "JWT missing sub field broke order customerId injection",
-    "ProductDetail layout with next/image fill"
+    "ProductDetail layout with next/image fill",
+    "/admin redirected logged-in customers to /portal/dashboard (middleware role check)"
   ],
   "pending": [
     "Git remote + CI/CD",
