@@ -4,7 +4,7 @@
   "serverPath": "/opt/taranom",
   "ssh": "ssh -i ~/.ssh/wholesale_server -p 2222 wholesale-admin@5.75.200.102",
   "stack": ["Next.js 15", "NestJS 10", "PostgreSQL 16", "MinIO", "Meilisearch", "Docker"],
-  "lastDeploy": "2026-07-09",
+  "lastDeploy": "2026-07-21",
   "lastE2e": "PASSED — ORD-2026-00002",
   "documentation": {
     "worklog": "docs/WORKLOG.md",
@@ -13,13 +13,13 @@
   },
   "knownRisks": [
     "Product images uploaded before sharp remain as original JPG size",
-    "Min order qty vs stock can block checkout if inventory low",
-    "Online payment (ZarinPal) only via portal invoices, not checkout"
+    "Min order qty vs stock can block checkout if inventory low"
   ],
   "fixedBugs": [
     "AdminProducts images empty on save (useCallback deps)",
     "JWT missing sub field broke order customerId injection",
-    "ProductDetail layout with next/image fill"
+    "ProductDetail layout with next/image fill",
+    "Checkout 500: TieredDiscountEntity/SideDiscountEntity/ProductSpecMemoryEntity missing from TypeORM entities list"
   ],
   "pending": [
     "Git remote + CI/CD",
