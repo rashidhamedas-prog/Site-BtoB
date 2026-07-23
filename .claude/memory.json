@@ -1,19 +1,28 @@
 {
-  "project": "Taranom B2B",
-  "domain": "poshaktaranom.com",
+  "project": "Taranom B2B + B2C (shared core)",
+  "domainWholesale": "poshaktaranom.com",
+  "domainRetail": "www.poshaktaranom.ir",
   "serverPath": "/opt/taranom",
   "ssh": "ssh -i ~/.ssh/wholesale_server -p 2222 wholesale-admin@5.75.200.102",
   "stack": ["Next.js 15", "NestJS 10", "PostgreSQL 16", "MinIO", "Meilisearch", "Docker"],
+  "architecture": "shared-core-two-storefronts",
+  "retailPreviewPath": "/retail",
   "lastDeploy": "2026-07-22",
   "lastE2e": "PASSED — ORD-2026-00002",
   "documentation": {
     "worklog": "docs/WORKLOG.md",
+    "b2c": "docs/B2C.md",
+    "blueprint": "skill site b2c.md",
+    "designRetail": "design-system/b2c/MASTER.md",
     "reports": "docs/reports/",
     "conventions": "docs/conventions.md"
   },
   "knownRisks": [
     "Product images uploaded before sharp remain as original JPG size",
-    "Min order qty vs stock can block checkout if inventory low"
+    "Min order qty vs stock can block checkout if inventory low",
+    "Retail DNS/SSL for .ir not yet on this server — nginx block still commented",
+    "Retail OTP/RMA/Torob feeds not built yet",
+    "Retail checkout still requires existing JWT customer (portal)"
   ],
   "fixedBugs": [
     "AdminProducts images empty on save (useCallback deps)",
@@ -22,8 +31,17 @@
     "Checkout 500: TieredDiscountEntity/SideDiscountEntity/ProductSpecMemoryEntity missing from TypeORM entities list"
   ],
   "pending": [
+    "RMA size exchange + wallet",
+    "Torob/Bam feeds + affiliate postbacks",
+    "Point .ir DNS here + enable nginx SSL",
     "Git remote + CI/CD",
     "Real DB migrations",
     "Re-upload legacy product images for WebP standard"
+  ],
+  "retailReady": [
+    "/retail storefront shell",
+    "OTP retail auth",
+    "channel-aware order pricing/shipping",
+    "admin channel filter"
   ]
 }
