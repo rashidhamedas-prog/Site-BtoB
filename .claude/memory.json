@@ -7,9 +7,9 @@
   "stack": ["Next.js 15", "NestJS 10", "PostgreSQL 16", "MinIO", "Meilisearch", "Docker"],
   "architecture": "shared-core-two-storefronts",
   "retailPreviewPath": "/retail",
-  "lastDeploy": "2026-07-22",
+  "lastDeploy": "2026-07-24 d852373 — retail B2C complete on server",
   "lastE2e": "PASSED — ORD-2026-00002",
-  "lastRetailComplete": "2026-07-24 f4a8df0",
+  "lastRetailComplete": "2026-07-24 d852373",
   "documentation": {
     "worklog": "docs/WORKLOG.md",
     "b2c": "docs/B2C.md",
